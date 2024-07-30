@@ -15,6 +15,7 @@ body {
     height: 80%;
     width: 80%;
     max-width: 1200px;
+    flex-direction: column;
 }
 
 #sidebar {
@@ -23,9 +24,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    height: 100%;
-    width: 25%;
-    margin-right: 20px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 #app {
@@ -36,8 +37,8 @@ body {
     text-align: center;
     backdrop-filter: blur(10px);
     position: relative;
-    height: 100%;
-    width: 75%;
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,4 +77,30 @@ h1 {
     display: block;
     margin: 0 auto;
     z-index: 99;
+}
+
+@media (min-width: 768px) {
+    #container {
+        flex-direction: row;
+    }
+
+    #sidebar {
+        height: 100%;
+        width: 25%;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    #app {
+        height: 100%;
+        width: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #container {
+        height: 80%;
+        width: 80%;
+        max-width: 1200px;
+    }
 }
